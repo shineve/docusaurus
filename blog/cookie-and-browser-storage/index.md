@@ -26,6 +26,8 @@ Content-type: text/html
 Set-Cookie: my_cookie=bulandent
 ```
 
+<!--truncate-->
+
 當瀏覽器接收到 `Set-Cookie header`，便會將 `Cookie` 保存起來，並且在下一次請求時將 `Cookie` 附在 `Request Header` 發送給伺服器，這樣伺服器就可以讀取 `Cookie` 中的資料。
 
 ``` text
@@ -34,7 +36,6 @@ Host: www.example.org
 Cookie: my_cookie=bulandent
 ```
 
-<!--truncate-->
 
 ### Cookie 分類
 

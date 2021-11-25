@@ -14,7 +14,7 @@ const config = {
   organizationName: 'shineve', // Usually your GitHub org/user name.
   projectName: 'blog', // Usually your repo name.
   deploymentBranch: 'main',
-  url: 'https://github.com/shineve',
+  url: 'https://blog.shineve.dev',
   trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -28,9 +28,9 @@ const config = {
           path: './blog',
           routeBasePath: '/',
           showReadingTime: true,
-          blogTitle: "shineve's Blog",
+          blogTitle: "Blog",
           blogDescription: "shineve's Blog",
-          blogSidebarCount: 8,
+          blogSidebarCount: 7,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
