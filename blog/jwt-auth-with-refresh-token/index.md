@@ -136,6 +136,12 @@ JWT 擁有基於 Token 的會話管理方式所擁有的一切優勢
 
 上述的架構，提供了服務端禁用用戶 Token 的方式，當用戶需要登出或禁用用戶時，只需要將服務端的 Refresh Token 禁用或刪除，用戶就會在 Access Token 過期後，由於無法獲取到新的 Access Token 而再也無法訪問需要認證的接口。這樣的方式雖然會有一定的空窗期（取決於 Access Token 的失效時間），但是結合用戶登出時客戶端刪除 Access Token 的操作，基本上可以適應常規情況下對用戶認證鑑權的精度要求。
 
+完整的流程一般如下：
+
+![Spotify OAuth Flow](spotify-oauth-flow.jpg)
+
+*以上是 Spotify 的 OAuth Flow，可以參考 [Spotify OAuth Flow](https://developer.spotify.com/documentation/general/guides/authorization-guide/#authorization-code-flow)*
+
 ## **總結**
 
 JWT 的使用，提高了開發者開發用戶驗證功能的效率，降低了系統架構的複雜度，同時也避免了大量的資料庫和緩存查詢，也降低了業務接口的響應延遲。
@@ -145,4 +151,5 @@ JWT 的使用，提高了開發者開發用戶驗證功能的效率，降低了�
 ## 參考
 
 1. **[Hasura The Ultimate Guide to handling JWTs on frontend clients (GraphQL)](https://hasura.io/blog/best-practices-of-using-jwt-with-graphql/)**
-2. **[GitHub Demo](https://github.com/shineve/jwt-tutorial)**
+2. **[Spotify OAuth Flow](https://developer.spotify.com/documentation/general/guides/authorization-guide/#authorization-code-flow)**
+3. **[GitHub Demo](https://github.com/shineve/jwt-tutorial)**
