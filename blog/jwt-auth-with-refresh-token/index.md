@@ -11,9 +11,7 @@ tags:
 - JWT
 ---
 
-HTTP 是一個 stateless 的協議，就算我們連續地向同一個 server 發送請求，在每一次請求結束後，server 並不能知道請求是由誰發送的（同一個 IP 並不代表同一個用戶）。但我們在實際應用中，很多場景是會
-
-HTTP 是一個 stateless 的協議，因此 server 並不知道每次的請求是由誰發送的（同一個 IP 並不代表同一個用戶），但我們在實際應用中，許多場景是會需要 client 和 server 之間的對話是有狀態的，例如某些API
+HTTP 是一個 stateless 的協議，因此 server 並不知道每次的請求是由誰發送的（同一個 IP 並不代表同一個用戶），但我們在實際應用中，許多場景是會需要 client 和 server 之間的對話是有狀態的，例如用戶認證相關的API。
 
 在 Web 應用中，用戶的認證（Authentication）和授權（Authorization）是非常重要的一塊，在實踐中有多種可用方案，並且各有其優點。
 
