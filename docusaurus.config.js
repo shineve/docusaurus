@@ -6,7 +6,7 @@ const codeTheme = require('prism-react-renderer/themes/vsDark');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'shineve',
-  tagline: 'Front-End Engineer',
+  tagline: 'Software Engineer',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -57,6 +57,11 @@ const config = {
           {
             href: 'https://www.linkedin.com/in/hao-ting-88802416b/',
             label: 'LinkedIn',
+            position: 'right',
+          },
+          {
+            href: 'https://www.notion.so/hao95/Book-Club-c515cc928ab74cd6b7e0acae55ff51c5/',
+            label: 'Notion',
             position: 'right',
           },
         ],
