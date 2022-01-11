@@ -55,12 +55,12 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://www.linkedin.com/in/hao-ting-88802416b/',
+            href: 'https://www.linkedin.com/in/tinghao95/',
             label: 'LinkedIn',
             position: 'right',
           },
           {
-            href: 'https://www.notion.so/hao95/Book-Club-c515cc928ab74cd6b7e0acae55ff51c5/',
+            href: 'https://hao95.notion.site/Book-Club-c515cc928ab74cd6b7e0acae55ff51c5',
             label: 'Notion',
             position: 'right',
           },
