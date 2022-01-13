@@ -1,5 +1,7 @@
 ---
 title: CSS Preprocessor
+description: 你認識 CSS Preprocessor 嗎？你了解為什麼要使用它嗎？
+keywords: [css, sass, scss, less, stylus, styl]
 date: 2021-10-03
 authors: shineve
 categories:

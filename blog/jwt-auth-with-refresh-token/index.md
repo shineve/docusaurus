@@ -1,5 +1,7 @@
 ---
 title: 基于 JWT + Refresh Token 的用戶驗證
+description: JWT在現在的網站中是非常常見的，但是在網站的開發中，我們需要設計一個方便的方式來驗證用戶的身份，這樣才能保證用戶的身份不被盜用。
+keywords: [html, javascript, jwt, refresh token]
 date: 2021-11-26
 authors: shineve
 categories:

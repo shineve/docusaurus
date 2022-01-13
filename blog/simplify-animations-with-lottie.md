@@ -1,5 +1,7 @@
 ---
 title: Simplify your animations with Lottie now!
+description: Use Lottie to create animations in your web apps or mobile apps.
+keywords: [lottie, css, web development, mobile development]
 date: 2020-12-30
 authors: shineve
 categories:

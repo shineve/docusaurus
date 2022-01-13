@@ -45,6 +45,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [{name: 'keywords', content: 'javascript, css, html, web deveolpment, blog'}],
       navbar: {
         title: 'shineve',
         logo: {

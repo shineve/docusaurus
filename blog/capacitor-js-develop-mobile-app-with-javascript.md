@@ -1,5 +1,7 @@
 ---
 title: Capacitor, Multi-Platform Support for JavaScript
+description: Capacitor is a framework that helps you develop a native mobile app with JavaScript.
+keywords: [capacitor, ionic, hybrid app, javascript]
 date: 2020-12-29
 authors: shineve
 categories:

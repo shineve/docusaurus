@@ -1,5 +1,7 @@
 ---
 title: Script Tag - async & defer
+description: HTML 中的 Async 和 defer 属性介紹
+keywords: [javascript, html, web development]
 date: 2021-04-25
 authors: shineve
 categories:

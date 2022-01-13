@@ -1,5 +1,7 @@
 ---
 title: 什麼是 Cookie？Web Storage 又是什麼？
+description: 在瀏覽器中，我們可以使用 Cookie 和 Web Storage 来存取資料。
+keywords: [javascript, cookie, storage, web development]
 date: 2021-11-11 22:13:28
 authors: shineve
 categories:

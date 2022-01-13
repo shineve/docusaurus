@@ -1,5 +1,7 @@
 ---
 title: New JavaScript Features in ES6 ~ ES12
+description: New JavaScript Features in ES6 ~ ES12
+keywords: [javascript]
 date: 2021-04-04
 authors: shineve
 categories:

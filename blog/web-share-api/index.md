@@ -1,5 +1,7 @@
 ---
 title: Web Share API - Native Sharing is Easy!
+description: This article explains how to use the Web Share API to share content on the web.
+keywords: [javascript]
 date: 2021-3-27
 authors: shineve
 categories:

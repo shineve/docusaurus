@@ -1,5 +1,7 @@
 ---
 title: Resource Hints - preload, prefetch
+description: HTML 中的 preload 和 prefetch 属性介紹
+keywords: [html, javascript]
 date: 2021-06-01
 authors: shineve
 categories:

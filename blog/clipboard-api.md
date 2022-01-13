@@ -1,5 +1,7 @@
 ---
 title: Clipboard API - Copy text to clipboard with JavaScript
+description: 該篇文章將會介紹如何使用 JavaScript 將文字複製到剪貼簿。
+keywords: [javascript, clipboard, copy, cut, paste]
 date: 2021-3-26
 authors: shineve
 categories:

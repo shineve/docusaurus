@@ -1,5 +1,7 @@
 ---
 title: GitHub & Jira Automation
+description: Guide to integrate GitHub and Jira
+keywords: [project management, github, jira]
 date: 2020-12-14 
 authors: shineve
 categories: 

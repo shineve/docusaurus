@@ -1,5 +1,7 @@
 ---
 title: How Vue Scoped CSS Works?
+description: This article explains how data-* attributes work and how to use them to style elements in Vue.
+keywords: [vue, html, css]
 date: 2021-10-04
 authors: shineve
 categories: 

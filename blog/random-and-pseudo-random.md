@@ -1,5 +1,7 @@
 ---
 title: 「偽隨機」和「真隨機」的應用
+description: 認識生活中與隨機的應用（以遊戲為例）
+keywords: [產品設計]
 date: 2021-10-17
 authors: shineve
 categories: 

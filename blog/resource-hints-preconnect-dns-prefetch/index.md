@@ -1,5 +1,7 @@
 ---
 title: Resource Hints - preconnect, dns-prefetch
+description: HTML 中的 preconnect 和 dns-prefetch 属性介紹
+keywords: [html, javascript]
 date: 2021-06-10
 authors: shineve
 categories:
