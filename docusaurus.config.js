@@ -35,6 +35,9 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        gtag: {
+          trackingID: 'G-TCLVEN66J8',
+        },
         sitemap: { changefreq: 'weekly', priority: 0.5 },
       }),
     ],
@@ -79,9 +82,6 @@ const config = {
       prism: {
         theme: codeTheme,
         darkTheme: codeTheme,
-      },
-      googleAnalytics: {
-        trackingID: 'G-TCLVEN66J8',
       },
       sitemap: { changefreq: 'weekly', priority: 0.5 },
     }),
