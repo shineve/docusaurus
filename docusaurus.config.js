@@ -23,12 +23,15 @@ const config = {
       '@docusaurus/preset-classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: false,
-        blog: {
-          path: './blog',
+        docs: {
           routeBasePath: '/',
+          sidebarPath: require.resolve('./sidebars.js'),
+        },
+        blog: {
+          path: 'blog',
+          routeBasePath: '/blog',
           showReadingTime: true,
-          blogTitle: "Blog",
+          blogTitle: 'Blog',
           blogDescription: "shineve's Blog",
           blogSidebarCount: 7,
         },
@@ -45,14 +48,22 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      metadata: [{name: 'keywords', content: 'javascript, css, html, web deveolpment, blog'}],
+      metadata: [{ name: 'keywords', content: 'javascript, css, html, web deveolpment, blog' }],
       navbar: {
         title: 'shineve',
         logo: {
           alt: 'shineve blog Logo',
           src: 'img/logo.jpg',
+          href: '/blog'
         },
         items: [
+          {
+            type: 'doc',
+            docId: 'Style Guide/js-style-guide',
+            position: 'left',
+            label: 'Docs',
+          },
+          {to: 'blog', label: 'Blog', position: 'left'}, // or position: 'right'
           {
             href: 'https://github.com/shineve',
             label: 'GitHub',
