@@ -1,8 +1,9 @@
 ---
-title: 前端JS規範
+title: 前端 JavaScript 規範
 keywords: [front-end, javascript, coding, conventions]
 date: 2022-05-02
 authors: shineve
+slug: /
 categories:
   - Front-End
   - Coding Conventions
@@ -14,7 +15,6 @@ tags:
 ### 變數 (Variables)
 
 命名方式：Camel Case
-
 命名規範：前綴名詞
 
 ```js
@@ -28,7 +28,6 @@ let maxCount = 10;
 ### 常數 (Constant)
 
 命名方式：全部大寫
-
 命名規範：多個單詞時使用`_`做分割
 
 ```js
@@ -48,7 +47,6 @@ const SERVER_ERROR_CODE = {
 ### 函數 (Function)
 
 命名方式：Camel Case
-
 命名規範：前綴動詞
 
 ```js
@@ -64,7 +62,6 @@ function writeEssay() {}
 ### 類
 
 命名方式：Pascal Case
-
 命名規範：前綴名詞
 
 ```js
@@ -117,12 +114,14 @@ if (!condition2) return
 
 ```js
 // bad
-type: 1; // 1代表新增  2代表修改
+// 1代表新增  2代表修改  3代表刪除
+type: 1;
 
 // good
 const MODIFY_TYPE = {
   ADD: 1,
   EDIT: 2,
+  DELETE: 3,
 };
 
 type: MODIFY_TYPE.ADD;
@@ -147,6 +146,23 @@ if (!name) {
 if (collection.length) {
 }
 if (notTrue) {
+}
+```
+
+### 使用正面詞語來表達
+
+儘可使用正面的詞語來表達情況，反面的詞語再做反面判斷時會變得難以理解
+
+```js
+// bad
+if (!isProductNotReleased) {
+}
+
+// good
+if (isProductReleased) {
+}
+
+if (!isProductReleased) {
 }
 ```
 
@@ -176,27 +192,30 @@ switch (typeof variable) {
 }
 ```
 
-### 使用 Variables 名字解釋
+### 使用 Variables 名字來做解釋
 
 **邏輯複雜**時，建議定義新 Variables 來解釋，而不是晦澀難懂的簡寫。
 
 ```js
 // bad
-function(value) {
-    return !helpers.req(value) || this.entity.entVocabularyEntries.filter(item => item.vocabularyEntryName === value).length < 2;
+function isQualifiedPlayer(user) {
+  return (
+    (user.rate > 80 && user.score > 300 && user.level > 120) ||
+    user.medals.filter(medal => medal.type === 'gold').length > 10
+  );
 }
 
 // good
-function(value) {
-    let entVocabularyList = this.entity.entVocabularyEntries;
-    let repeatCount = entVocabularyList.filter(item => item.vocabularyEntryName === value).length;
-    return !helpers.req(value) || repeatCount < 2;
+function isQualifiedPlayer(value) {
+  const isExperiencedPlayer = user.rate > 80 && user.score > 300 && user.level > 120;
+  const isGoldMedalPlayer = user.medals.filter(medal => medal.type === 'gold').length > 10;
+  return isExperiencedPlayer || isGoldMedalPlayer;
 }
 ```
 
-### 使用 Function 名字解釋
+### 使用 Function 名字來做解釋
 
-**遵循單一職責**的基礎上，可以把邏輯隱藏在 function 中，同時使用準確的 function 名字解釋。
+**遵循單一職責**的基礎上，可以把邏輯隱藏在 Function 中，同時使用準確的 Function 名字解釋。
 
 ```js
 // bad
@@ -213,13 +232,13 @@ if (modifyType === MODIFY_TYPE.ADD) {
 // good
 modifyType === MODIFY_TYPE.ADD ？ this._insertVariable(data) : this._updateVariable(data);
 
-async _insertVariable() {
+async _insertVariable(data) {
     await batchVariableAPI(data);
     this._successOperation('添加成功');
 }
 
-async _updateVariable() {
-    updateVariableAPI(data);
+async _updateVariable(data) {
+    await updateVariableAPI(data);
     this._successOperation('修改成功');
 }
 
