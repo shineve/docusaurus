@@ -54,7 +54,7 @@ const config = {
         logo: {
           alt: 'shineve blog Logo',
           src: 'img/logo.jpg',
-          href: '/blog'
+          href: '/'
         },
         items: [
           {
