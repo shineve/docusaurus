@@ -1,5 +1,5 @@
 ---
-title: 前端Vue規範
+title: 前端 Vue 規範
 keywords: [vue, javascript, front-end, coding, conventions]
 date: 2022-05-02
 authors: shineve
