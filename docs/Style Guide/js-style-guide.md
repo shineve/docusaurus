@@ -234,12 +234,12 @@ modifyType === MODIFY_TYPE.ADD ？ this._insertVariable(data) : this._updateVari
 
 async _insertVariable(data) {
     await batchVariableAPI(data);
-    this._successOperation('添加成功');
+    this._successOperation('Insert success!');
 }
 
 async _updateVariable(data) {
     await updateVariableAPI(data);
-    this._successOperation('修改成功');
+    this._successOperation('Edit success!');
 }
 
 _successOperation(toastMsg) {
