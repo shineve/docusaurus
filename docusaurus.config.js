@@ -54,7 +54,7 @@ const config = {
         logo: {
           alt: 'shineve blog Logo',
           src: 'img/logo.jpg',
-          href: '/'
+          href: '/',
         },
         items: [
           {
@@ -63,7 +63,7 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
-          {to: 'blog', label: 'Blog', position: 'left'}, // or position: 'right'
+          { to: 'blog', label: 'Blog', position: 'left' },
           {
             href: 'https://github.com/shineve',
             label: 'GitHub',
@@ -94,6 +94,7 @@ const config = {
       prism: {
         theme: codeTheme,
         darkTheme: codeTheme,
+        additionalLanguages: ['powershell'],
       },
       sitemap: { changefreq: 'weekly', priority: 0.5 },
     }),
