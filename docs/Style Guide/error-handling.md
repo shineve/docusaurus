@@ -1,5 +1,5 @@
 ---
-title: 前端 Error Handling (Axios)
+title: Axios error handling
 keywords: [front-end, javascript, coding, conventions]
 date: 2022-05-15
 authors: shineve
@@ -11,13 +11,13 @@ tags:
   - Coding Conventions
 ---
 
-對於 API 來說，後端經常定義的結構如下：
+For APIs, the commonly defined backend structure is as follows:
 
 ```ts
 type Response = {
-    code: Number, // 狀態碼
-    desc: String, // 詳細描述
-    results: Array | Object // 前端需要的數據
+    code: Number, // status code
+    desc: String, // detailed description
+    results: Array | Object // data needed by the frontend
 }
 
 enum SERVER_ERROR_CODE  {
@@ -59,17 +59,16 @@ batchGetDocumentDetails(documents)
   });
 ```
 
-### 解決方案
+### Solution
 
-在 http 層 axios 拿到數據後進行統一處理
+After receiving the data from the http layer axios, perform unified processing.
 
 ```js
-import Vue from 'vue';
 import axios from 'axios';
 
 const service = axios.create({
-  baseURL: rootURL, // api的base_url，即 http://www.google.com/api/ 中的 http://www.google.com/
-  timeout: 15000, // 請求超時時間
+  baseURL: rootURL, // api's base_url, i.e., http://www.google.com/ in http://www.google.com/api/
+  timeout: 15000, // request timeout time
 });
 
 // request攔截器
@@ -91,16 +90,16 @@ service.interceptors.request.use(
   },
 );
 
-// respone攔截器
+// response interceptor
 service.interceptors.response.use(
   response => {
     const res = response.data;
     if (res.code === SERVER_ERROR_CODE.SUCCESS) {
-      // 統一處理， 直接返回數據
+      // unified processing, directly return data
       return res.results;
     } else {
-      // 錯誤統一報出
-      Vue.prototype.$toast.show(res.desc);
+      // unified error reporting
+      this.$toast.show(res.desc);
       return Promise.reject(res);
     }
   },
@@ -112,10 +111,9 @@ service.interceptors.response.use(
 export default service;
 ```
 
-Promise 執行 reject 代碼，瀏覽器會報`Uncaught (in promise)`錯誤。這是因爲中斷了 Promise 操作但又沒有對其進行處理，故會出現此錯誤。
-只需要使用攔截`unhandledrejection`並阻止默認行為即可。
+If a Promise execution rejects a code, the browser will report an `Uncaught (in promise)` error because the Promise operation has been interrupted but has not been handled. To prevent this error from occurring, simply intercept `unhandledrejection` and prevent default behavior.
 
 ```js
-// Promise Catch不報錯
+// Promise Catch does not report errors
 window.addEventListener('unhandledrejection', event => event.preventDefault());
 ```

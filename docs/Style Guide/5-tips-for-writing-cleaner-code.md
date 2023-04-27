@@ -12,9 +12,9 @@ tags:
   - Coding Conventions
 ---
 
-### 1. 避免不必要的嵌套 (Nesting)
+### 1. Avoid Unnecessary Nesting
 
-過多的嵌套可能會使代碼更難讀、更容易出錯，因此我們可以提早 `return` 來避免過多的嵌套。
+Too much nesting can make code harder to read and more prone to errors, so we can use an early `return` to avoid excessive nesting.
 
 ```js
 // Bad
@@ -34,7 +34,7 @@ function deleteItem(item) {
 }
 ```
 
-Nested if 的例子
+Nested if example:
 
 ```js
 // Bad
@@ -60,13 +60,13 @@ function saveItem(item) {
 }
 ```
 
-### 2.多利用解構 (Destruct)
+### 2.Make Use of Destructuring
 
-[參考文件](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+[Reference document](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
-我們經常會在 Function 內接受一個 `Object` 為參數，這時候我們可以使用 `destruct` 來解構這個 `Object`，這樣我們就可以直接使用 `Object` 的屬性來取得資料。
+We often accept an `Object` as a parameter within a function. At this time, we can use `destructuring` to destructure this `Object`, so that we can directly use the properties of the Object to obtain data.
 
-在不使用 `destruct` 的例子：
+Example without using `destructuring`:
 
 ```js
 // not so good
@@ -77,7 +77,7 @@ function getFullName(person) {
 }
 ```
 
-使用 `destruct` 後的例子：
+Example with `destructuring`:
 
 ```js
 // good
@@ -92,9 +92,9 @@ function getFullName({ firstName, lastName }) {
 }
 ```
 
-### 3. 使用 Pure Function 來避免副作用 (Side Effects)
+### 3. Use Pure Functions to Avoid Side Effects
 
-在寫一個 Function 時，最好不要使用到 Function 外的 Variables，這樣可以避免副作用。
+When writing a function, it is best not to use variables outside the function, so as to avoid side effects.
 
 ```js
 // bad
@@ -106,9 +106,9 @@ function changeNumber(number) {
 changeNumber(5);
 ```
 
-上面的例子中，我們在 `changeNumber` 內使用到了 `items` 這個 global variables，這樣的做法很容易導致不可預測的狀況，例如 items 不存在了或其 data type 被改變了，這時就會出現錯誤。
+In the example above, we use `items`, a global variable, within `changeNumber`. This approach is prone to unpredictable situations, such as when items no longer exists or its data type is changed, which can lead to errors.
 
-要避免上面的這種 副作用，我們可以使用 `Pure Function`的方式重新撰寫：
+To avoid the above-mentioned side effects, we can rewrite it using the `Pure Function` approach:
 
 ```js
 // good
@@ -117,13 +117,13 @@ function addNumByThree(number) {
 }
 ```
 
-上面的例子中，我們移除掉了外部 variables 的依賴(External Dependency)，使得其功能完全獨立，不會影響到其他的部分，因此我們可以更容易預測 `Function` 的行為。
+In the example above, we removed the dependency on external variables, making its functionality completely independent and not affecting other parts. Therefore, we can more easily predict the behavior of the function.
 
-### 4. 盡量讓 Function 只做一件事
+### 4. 4. Make Functions Do One Thing Well
 
-我們在撰寫 `Function` 時，最好不要讓它做太多事，這樣可以減少 `Function` 的複雜度，並且可以減少 `Function` 的副作用。
+When writing functions, it is best not to do too much, which can reduce the complexity and side effects of the function.
 
-不好的例子：
+Bad example:
 
 ```js
 // Bad
@@ -132,8 +132,7 @@ function validateAndSignUp() {
 }
 ```
 
-上面的這種方式很容易讓我們的代碼過於複雜，最終變成 [`Spaghetti code`](https://zh.wikipedia.org/zh-tw/%E9%9D%A2%E6%9D%A1%E5%BC%8F%E4%BB%A3%E7%A0%81)，同時也讓代碼難以複用、維護、debug。
-因此我們可以將它拆成一個一個的小單元：
+The above approach can easily make our code too complicated, eventually becoming a [Spaghetti code](https://zh.wikipedia.org/zh-tw/%E9%9D%A2%E6%9D%A1%E5%BC%8F%E4%BB%A3%E7%A0%81), and also make the code difficult to reuse, maintain, and debug. Therefore, we can break it down into small units:
 
 ```js
 function validate() {
@@ -145,28 +144,28 @@ function signUp() {
 }
 ```
 
-### 5. 使用有意義的詞語命名
+### 5. Use Meaningful Names
 
-1. 當 `Function` 是一個行為時，使用**動詞**命名。
+1. When Function is an action, name it using a verb.
 
 ```js
 // bad
 function passwordValidation() {
-  //
+  // ...
 }
 // good
 function validatePassword() {
-  //
+  // ...
 }
 ```
 
-2. 如果 variables 是 `Boolean` 時，加上 `is` 前綴。
+2. If the variable is a `Boolean`, prefix it with `is`.
 
 ```js
 const isValidPassword = validatePassword('abcd');
 ```
 
-3. 如果 variables 是 `Array` 時，命名其為複數或加上 `list` 後綴。
+3. If the variable is an `Array`, name it in plural or with a `list` suffix.
 
 ```js
 // bad
@@ -176,7 +175,7 @@ const animals = ['cat', 'dog', 'bird'];
 const animalList = ['cat', 'dog', 'bird'];
 ```
 
-4. 使用 `callback` 時，迭代時始終使用有意義的名稱：
+4. When using a `callback`, always use meaningful names when iterating:
 
 ```js
 // Really bad
