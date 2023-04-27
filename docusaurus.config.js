@@ -27,14 +27,6 @@ const config = {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
         },
-        blog: {
-          path: 'blog',
-          routeBasePath: '/blog',
-          showReadingTime: true,
-          blogTitle: 'Blog',
-          blogDescription: "shineve's Blog",
-          blogSidebarCount: 7,
-        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -50,20 +42,13 @@ const config = {
     ({
       metadata: [{ name: 'keywords', content: 'javascript, css, html, web deveolpment, blog' }],
       navbar: {
-        title: 'shineve',
+        title: 'ShinEve',
         logo: {
           alt: 'shineve blog Logo',
           src: 'img/logo.jpg',
           href: '/',
         },
         items: [
-          {
-            type: 'doc',
-            docId: 'Style Guide/js-style-guide',
-            position: 'left',
-            label: 'Docs',
-          },
-          { to: 'blog', label: 'Blog', position: 'left' },
           {
             href: 'https://github.com/shineve',
             label: 'GitHub',
@@ -72,11 +57,6 @@ const config = {
           {
             href: 'https://www.linkedin.com/in/tinghao95/',
             label: 'LinkedIn',
-            position: 'right',
-          },
-          {
-            href: 'https://hao95.notion.site/Book-Club-c515cc928ab74cd6b7e0acae55ff51c5',
-            label: 'Notion',
             position: 'right',
           },
         ],

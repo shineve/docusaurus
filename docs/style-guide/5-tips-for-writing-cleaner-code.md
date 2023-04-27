@@ -3,7 +3,6 @@ title: 5 Tips for Writing Cleaner Code
 keywords: [front-end, javascript, coding, conventions]
 date: 2022-06-06
 authors: shineve
-slug: /5-tips-for-writing-cleaner-code
 categories:
   - Front-End
   - Coding Conventions

@@ -5,11 +5,12 @@ keywords: [javascript, clipboard, copy, cut, paste]
 date: 2021-3-26
 authors: shineve
 categories:
-- Front-End
+  - Front-End
 tags:
-- JavaScript
-- Web Development
+  - JavaScript
+  - Web Development
 ---
+
 Copy buttons are often used in many websites and applications, in this tutorial, you would learn how to copy text in your website or web app across all browsers.
 
 [Demo](https://codepen.io/shineve/pen/VwPaPda)
@@ -62,10 +63,10 @@ function newWayCopyToClipboard(textToCopy) {
   navigator.clipboard
     .writeText(textToCopy)
     .then(() => {
-      console.log("Text copied to clipboard");
+      console.log('Text copied to clipboard');
     })
-    .catch((error) => {
-      console.error("Failed to copy: ", error);
+    .catch(error => {
+      console.error('Failed to copy: ', error);
     });
 }
 ```
@@ -79,9 +80,9 @@ async function copyToClipboard(textToCopy) {
   if (navigator.clipboard && navigator.clipboard.writeText) {
     try {
       await navigator.clipboard.writeText(textToCopy);
-      console.log("Text copied to clipboard with Clipboard API");
+      console.log('Text copied to clipboard with Clipboard API');
     } catch {
-      console.error("Failed to copy: ", error);
+      console.error('Failed to copy: ', error);
       wideSupportCopyToClipboard(textToCopy);
     }
   } else {
@@ -90,10 +91,9 @@ async function copyToClipboard(textToCopy) {
 }
 ```
 
-## Resources
+## References
 
 - [MDN - Clipboard API](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API)
 - [MDN - Clipboard.writeText()](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText)
 - [Can I Use - Clipboard API browser Compatibility](https://caniuse.com/?search=clipboard)
 - [Unblocking clipboard access - Safer, unblocked clipboard access for text and images](https://web.dev/async-clipboard/)
-  
