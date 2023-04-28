@@ -1,17 +1,18 @@
 ---
-title: CSS Postprocessor (PostCSS)
+title: Postprocessor (PostCSS)
 description: 你認識 CSS Postprocessor 嗎？你了解為什麼要使用它嗎？
 keywords: [postcss, css, autoprefixer]
-date: 2021-10-03 
+date: 2021-10-03
 authors: shineve
 categories:
-- Front-End
+  - Front-End
 tags:
-- CSS
-- CSS Postprocessor
-- PostCSS
+  - CSS
+  - Postprocessor
+  - PostCSS
 ---
-以最知名的 [PostCSS](https://postcss.org/) 為例，它是一個使用 JavaScript 轉換 CSS 的工具，它提供很多的API來分析、修改CSS的規則，因此它可以被利用來開發各種的工具，在拓展性極高的狀況下，它其實並不局限在於後處理。
+
+以最知名的 [PostCSS](https://postcss.org/) 為例，它是一個使用 JavaScript 轉換 CSS 的工具，它提供很多的 API 來分析、修改 CSS 的規則，因此它可以被利用來開發各種的工具，在拓展性極高的狀況下，它其實並不局限在於後處理。
 
 以下是較常見的 PostCSS Plugins：
 
@@ -19,7 +20,7 @@ tags:
 - [stylelint](https://stylelint.io/): 語法檢查和報錯。
 - [postcss-preset-env](https://www.npmjs.com/package/postcss-preset-env): 將先進的功能轉為目前主流瀏覽器所能支援的語法。（類似 [Babel](https://babeljs.io/)）
 - [postcss-nested](https://www.npmjs.com/package/postcss-nested): 提供 CSS Nesting 功能。
-- [cssnano](https://cssnano.co/): 在不改變CSS的效果為前提下，對CSS檔案做縮減及優化。
+- [cssnano](https://cssnano.co/): 在不改變 CSS 的效果為前提下，對 CSS 檔案做縮減及優化。
 - [Lost Grid](https://github.com/peterramsing/lost): 讓系統支援 Grid System。（通過 `calc()` 實現因此支援度很高）
 
 ### 優勢
