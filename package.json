@@ -54,6 +54,6 @@
       "eslint",
       "prettier --write"
     ],
-    "*": "prettier --write"
+    "*.json": "prettier --write"
   }
 }
