@@ -1,0 +1,9 @@
+node_modules
+
+.docusaurus
+.husky
+.prettierignore
+
+build
+package.json
+package-lock.json
