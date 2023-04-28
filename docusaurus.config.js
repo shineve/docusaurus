@@ -16,8 +16,6 @@ const config = {
   deploymentBranch: 'main',
   url: 'https://blog.shineve.dev',
   trailingSlash: false,
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
   presets: [
     [
       '@docusaurus/preset-classic',
